@@ -1,9 +1,9 @@
 import { AtomIcon, Edit, Share2 } from "lucide-react";
-import { UserButton, useUser } from "@clerk/clerk-react";
+// import { UserButton, useUser } from "@clerk/clerk-react";
 import { Link } from "react-router-dom";
 
 function Home() {
-  const { user, isSignedIn } = useUser();
+  // const { user, isSignedIn } = useUser();
 
   return (
     <div className="bg-gray-900 h-full min-h-screen flex flex-col items-center text-white">
@@ -18,7 +18,7 @@ function Home() {
             Our AI-powered resume builder helps you craft the perfect resume
             effortlessly — just a few clicks, and you're done!
           </p>
-          {isSignedIn ? (
+{/*           {isSignedIn ? ( */}
             <div className="flex gap-4 justify-center items-center">
               <Link to="/dashboard">
                 <button className="inline-block rounded-full bg-yellow-500 px-10 py-4 text-lg font-semibold text-gray-900 shadow-lg hover:bg-yellow-400 transition-all duration-300">
@@ -26,13 +26,13 @@ function Home() {
                 </button>
               </Link>
             </div>
-          ) : (
-            <Link to="/auth/sign-in">
-              <button className="inline-block rounded-full bg-yellow-500 px-10 py-4 text-lg font-semibold text-gray-900 shadow-lg hover:bg-yellow-400 transition-all duration-300">
-                Get Started Now
-              </button>
-            </Link>
-          )}
+          // ) : (
+          //   <Link to="/auth/sign-in">
+          //     <button className="inline-block rounded-full bg-yellow-500 px-10 py-4 text-lg font-semibold text-gray-900 shadow-lg hover:bg-yellow-400 transition-all duration-300">
+          //       Get Started Now
+          //     </button>
+          //   </Link>
+          // )}
         </div>
       </section>
 
