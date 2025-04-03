@@ -1,6 +1,6 @@
 import "./App.css";
 import { Routes, Route, Navigate } from "react-router-dom";
-import SignInPage from "./pages/SignInPage.jsx";
+// import SignInPage from "./pages/SignInPage.jsx";
 import Home from "./Home.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import EditResume from "./components/EditResume.jsx";
@@ -16,7 +16,7 @@ function App() {
       <div className="app-container">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/auth/sign-in" element={<SignInPage />} />
+{/*           <Route path="/auth/sign-in" element={<SignInPage />} /> */}
           <Route path="/about" element={<AboutPage />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route
