@@ -1,16 +1,16 @@
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
-import { ClerkProvider } from "@clerk/clerk-react";
+// import { ClerkProvider } from "@clerk/clerk-react";
 import { BrowserRouter } from "react-router-dom";
 
-const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
+// const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
-if (!PUBLISHABLE_KEY) {
-  throw new Error(
-    "Missing Clerk Publishable Key. Please add VITE_CLERK_PUBLISHABLE_KEY to your environment variables."
-  );
-}
+// if (!PUBLISHABLE_KEY) {
+//   throw new Error(
+//     "Missing Clerk Publishable Key. Please add VITE_CLERK_PUBLISHABLE_KEY to your environment variables."
+//   );
+// }
 
 const rootElement = document.getElementById("root");
 if (!rootElement) {
@@ -21,8 +21,8 @@ if (!rootElement) {
 
 createRoot(rootElement).render(
   <BrowserRouter>
-    <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
+{/*     <ClerkProvider publishableKey={PUBLISHABLE_KEY}> */}
       <App />
-    </ClerkProvider>
+{/*     </ClerkProvider> */}
   </BrowserRouter>
 );
